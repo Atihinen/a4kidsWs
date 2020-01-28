@@ -2,6 +2,7 @@ import os
 import shutil
 from md2pdf.core import md2pdf
 import git
+import tempfile
 
 def _get_repo(path):
     return git.Repo(path)
@@ -21,7 +22,14 @@ def _get_remote_langauage_branches(branch):
             all_lang_remote_branches.append(branch)
     return all_lang_remote_branches
 
+def _copy_css_to_tmp():
+    css_file = os.path.abspath(os.path.join(".", "default.css"))
+    tmp_path = os.path.join(tempfile.gettempdir(), "default.css")
+    shutil.copyfile(css_file, tmp_path)
+    return tmp_path
+
 def _get_documents(heads, checkout, branches):
+    css_file = _copy_css_to_tmp()
     doc_path = os.path.abspath(os.path.join("..", "docs"))
     for branch in branches:
         print("Branch:", branch)
@@ -46,9 +54,10 @@ def _get_documents(heads, checkout, branches):
                     mdcontent += "\n".join(f.readlines())
         filename = "{}_a4kWs.pdf".format(language_name)
         destination = os.path.join(pdf_path, filename)
-        md2pdf(destination, md_content=mdcontent)
+        md2pdf(destination, md_content=mdcontent, css_file=css_file)
         print("Created ", destination)
     checkout('master')
+    os.remove(css_file)
 
 
 
