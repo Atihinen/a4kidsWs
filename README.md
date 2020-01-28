@@ -1,4 +1,4 @@
-# a2kidsWs
+# a4kidsWs
 
 Arduino for kids with Scratch to help out starting with electronics
 
