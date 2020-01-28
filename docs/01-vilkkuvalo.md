@@ -87,4 +87,10 @@ Huomaa, LED valo voi jäädä vielä palamaan riippuen edellisestä valon tilast
 
 # Kysymys
 
-Muuta ohjelmakoodia
+Muuta ohjelmakoodia esimerkin mukaisesti.
+
+![Jälkimmäinen wait 1 secs muutetaan wait 4 secs](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/blink/blink_code_question.jpg)
+
+Muutos ei tarvitse uudelleen kytkentää joten Arduinoa ei tarvitse irrottaa tietokoneesta.
+
+_Miten LED valo käyttäytyy kun ohjelmakoodi käynnistetään? Miksi näin tapahtui?_
