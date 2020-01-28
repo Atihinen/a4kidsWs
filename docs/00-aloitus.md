@@ -29,7 +29,7 @@ Voit käyttää myös USB sarjaportti rajapintaa kommunikoinaan tietokoneen ja A
 
 S4A tuo kokonaisvaltaise käyttöliittymän ja graafisen ohjeilmointiympäristön ohjelmakoodin tekemiseen ja muokkaamiseen.
 
-### Open S4A
+### Avaa S4A
 
 Asennuksen jälkeen työpöydällä tai aloitusvalikossa tulisi olla S4A ikoni.
 
