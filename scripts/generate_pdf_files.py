@@ -31,6 +31,7 @@ def _copy_css_to_tmp():
 def _get_documents(heads, checkout, branches):
     css_file = _copy_css_to_tmp()
     doc_path = os.path.abspath(os.path.join("..", "docs"))
+    base_path = os.path.abspath(os.path.join(".."))
     for branch in branches:
         print("Branch:", branch)
         local_name = branch.split("origin/")[-1]
@@ -39,7 +40,7 @@ def _get_documents(heads, checkout, branches):
         else:
             checkout('-t', branch)
         language_name = local_name.split("/")[-1].strip()
-        pdf_path = os.path.abspath(os.path.join("..", language_name))
+        pdf_path = os.path.abspath(os.path.join(base_path, language_name))
         if os.path.exists(pdf_path):
             shutil.rmtree(pdf_path)
         os.mkdir(pdf_path)
@@ -54,7 +55,7 @@ def _get_documents(heads, checkout, branches):
                     mdcontent += "\n".join(f.readlines())
         filename = "{}_a4kWs.pdf".format(language_name)
         destination = os.path.join(pdf_path, filename)
-        md2pdf(destination, md_content=mdcontent, css_file=css_file)
+        md2pdf(destination, md_content=mdcontent, css_file_path=css_file)
         print("Created ", destination)
     checkout('master')
     os.remove(css_file)
