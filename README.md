@@ -31,8 +31,8 @@ Not yet written
 
 Choose your language (WIP):
 
-* English
-* Finnish
+* [English](https://github.com/Atihinen/a4kidsWs/tree/lang/en/docs)
+* [Finnish](https://github.com/Atihinen/a4kidsWs/tree/lang/fi/docs)
 
 # How to contribute
 
