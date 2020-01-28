@@ -1,0 +1,5 @@
+# not to include build md files
+*.pdf
+
+#not to include any pyc files
+scripts/*.pyc
