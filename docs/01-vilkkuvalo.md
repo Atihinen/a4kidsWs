@@ -32,7 +32,7 @@ Kokeen alussa tulee tehdä tarvittavat kytkennät jonka jälkeen Arduinon voi li
 
 ![Kytkentäkaavio](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/blink/blink_wiring.jpg)
 
-Liitetään musta kaapeli koekytkentälevyyn pitkään siniseen viivaan joka on yhteydessä Arduinon GROUND IO pinniin. Toinen pää kinnitetään LEDin miinus pinniin (viistetty kulma).
+Liitetään musta kaapeli koekytkentälevyn pitkään siniseen viivaan joka on yhteydessä Arduinon GROUND IO pinniin. Toinen pää kinnitetään LEDin miinus pinniin (viistetty kulma).
 
 Värikäs kaapeli kiinnitetään vapaaseen jääneeseen LED pinniin ja Arduinon IO pinniin numero 13.
 
