@@ -28,7 +28,7 @@ def _copy_css_to_tmp():
     shutil.copyfile(css_file, tmp_path)
     return tmp_path
 
-def _get_documents(heads, checkout, branches):
+def _get_documents(heads, repo, branches):
     css_file = _copy_css_to_tmp()
     doc_path = os.path.abspath(os.path.join("..", "docs"))
     base_path = os.path.abspath(os.path.join(".."))
@@ -36,9 +36,10 @@ def _get_documents(heads, checkout, branches):
         print("Branch:", branch)
         local_name = branch.split("origin/")[-1]
         if local_name in heads:
-            checkout(local_name)
+            repo.git.checkout(local_name)
         else:
-            checkout('-t', branch)
+            repo.git.checkout('-t', branch)
+        repo.remotes.origin.pull()
         language_name = local_name.split("/")[-1].strip()
         pdf_path = os.path.abspath(os.path.join(base_path, language_name))
         if os.path.exists(pdf_path):
@@ -57,7 +58,7 @@ def _get_documents(heads, checkout, branches):
         destination = os.path.join(pdf_path, filename)
         md2pdf(destination, md_content=mdcontent, css_file_path=css_file)
         print("Created ", destination)
-    checkout('master')
+    repo.git.checkout('master')
     os.remove(css_file)
 
 
@@ -66,7 +67,7 @@ def main():
     repo = _get_repo("..")
     _update_remotes(repo.remotes)
     language_branches = _get_remote_langauage_branches(repo.git.branch)
-    _get_documents(repo.heads, repo.git.checkout, language_branches)
+    _get_documents(repo.heads, repo, language_branches)
    
  
 

@@ -117,3 +117,8 @@ hr {
     margin: 0 auto 0 0;
     color: #999;
 }
+
+img {
+    display: block;
+    max-width: 35em;
+}
