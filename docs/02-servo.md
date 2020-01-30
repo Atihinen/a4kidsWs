@@ -55,9 +55,28 @@ Ohjelmakoodi rakkentaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva t
 
 ## Ohjelmakoodin vaiheet
 
+1. Aloitataan ohjelman aloitus. Tämä tapahtuu lisäämällä `When FLAG clicked` komento
+![When FLAG clicked komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/when_flag_clicked.jpg)
+1. Lisätään loputon silmukka
+![Forever loop komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/forver_loop.jpg)
+1. Lisätään motor komento kulmaan 0
+![Motor komento kulmassa 0](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/motor_0_angle.jpg) tämä asettaa servo moottorin 0 asteen kulmaan
+1. Listään odota sekuntti, jolloin servomoottorin asento on odotusajan verran sama. Huomaa että tähän voidaan asettaa kaksi arvoa. Servomoottorin pinnin numero ja kulma joka voi olla mitä vain 0-360 väliltä.
+![wait for x secs komento](https://github.com/Atihinen/a4kidsWs/raw/
+1. Lisätään motor komento kulmaan 90
+![Motor komento kulmassa 0](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/motor_90_angle.jpg) tämä asettaa servo moottorin 90 asteen kulmaan
+1. Tähän laitetaan vielä 1 sekunnin odotus jotta servomoottori ei liiku yhden sekunnin.
+![wait fo x secs komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/wait_for_x_secs.jpg)
+1. Lisätään motor komento kulmaan 180
+![Motor komento kulmassa 0](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/motor_180_angle.jpg) tämä asettaa servo moottorin 180 asteen kulmaan
+1. Lopuksi laitetaan vielä 1 sekunnin odotus jotta servomoottori ei liiku yhden sekunnin, ennenkuin silmukka alkaa alusta.
+![wait fo x secs komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/wait_for_x_secs.jpg)
+
 
 ## Lopullinen ohjelmakoodi
 
+Lopullinen ohjelmakoodi näyttää kutakuinkin tältä
+![Lopullinen ohjelamoodi](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/servo/servo_script.jpg)
 
 ## Käynnistä ohjelma
 
@@ -75,6 +94,7 @@ S4A oikeassa yläreunassa on punainen kahdeksankulmio. Tästä painamalla pitäi
 
 Muuta ohjelmakoodia esimerkin mukaisesti.
 
+![Keskimmäinen servomoottorin kulma muutetaan 45 asteen kulmaan](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/servo/servo_script_question.jpg)
 
 
 Muutos ei tarvitse uudelleen kytkentää joten Arduinoa ei tarvitse irrottaa tietokoneesta.
