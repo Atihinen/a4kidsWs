@@ -39,7 +39,7 @@ def _get_documents(heads, repo, branches):
             repo.git.checkout(local_name)
         else:
             repo.git.checkout('-t', branch)
-        repo.remotes.origin.pull(branch)
+        repo.remotes.origin.pull("/".join(branch.split("/")[1:]))
         language_name = local_name.split("/")[-1].strip()
         pdf_path = os.path.abspath(os.path.join(base_path, language_name))
         if os.path.exists(pdf_path):
