@@ -80,7 +80,7 @@ Lopullinen ohjelmakoodi näyttää kutakuinkin tältä
 
 ## Käynnistä ohjelma
 
-S4A oikeassa yläreunassa on vihreä lipun kuva. Tästä painamalla pitäisi ohjelmakoodi lähteä ajoon ja LED valo tulisi alkaa vilkkumaan.
+S4A oikeassa yläreunassa on vihreä lipun kuva. Tästä painamalla pitäisi ohjelmakoodi lähteä ajoon ja servo moottori alkaisi liikkumaan.
 ![Vihreä aloita ohjelmakoodi lippu](https://github.com/Atihinen/a4kidsWs/raw/master/media/start_script.jpg) 
 
 Mikäli näin ei tapahdu. Tarkista kytkennät ja että oikeat IO pinnit on käytössä.
