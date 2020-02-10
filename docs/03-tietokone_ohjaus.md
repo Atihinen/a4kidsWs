@@ -56,24 +56,22 @@ Ohjelmakoodi rakkentaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva t
 ![When FLAG clicked komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/when_flag_clicked.jpg)
 1. Lisätään loputon silmukka
 ![Forever loop komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/forver_loop.jpg)
-1. Lisätään `digital 13 on` komento. Tällä laitetaan LED valo päälle. Huomaa että tähän voi käyttää myös muita IO pinnejä kuin 13, mutta sitten pitää muuttaa kytkentää.
+1. Lisätään `if else` ehto lause, ehdon sisälle laitetaan `key pressed`. Tällä tarkkaillaan että onko VÄLILYÖNTI näppäin painettuna pohjaan. Tähän voi käyttää muita kirjaimia ja ei vaadi kytkentään muutoksia. Mikäli haluttu näppäin ei ole pohjassa suoritetaan `else` osioon laitettu koodi.
+![Joko tai ehto, jossa ehtona on VÄLILYÖNTI pohjassa](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/pc_control/if_key_pressed_else.jpg)
+1. Lisätään `digital 13 on` komento ehdon TOSI haaraan. Tällä laitetaan LED valo päälle, jos VÄLILYÖNTI on painettuna. Huomaa että tähän voi käyttää myös muita IO pinnejä kuin 13, mutta sitten pitää muuttaa kytkentää.
 ![Digital 13 on komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/digital_io_on.jpg)
-1. Listään odota sekuntti, jolloin LED valo on odotusajan verran päällä. Huomaa että tähän voidaan asettaa mikä tahansa numero joka kuvastaa kuinka monta sekunttia pitäisi odottaa.
-![wait for x secs komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/wait_for_x_secs.jpg)
-1. Lisätään `digital 13 off` komento. Tällä laitetaan LED valo pois päältä. Huomaa että tässä vaihtoehto pitää olla sama numero kuin mikä oli `digital on` komennossa.
+1. Lisätään `digital 13 off` komento ehdon EPÄTOSI haaraan. Tällä laitetaan LED valo pois päältä, jos VÄLILYÖNTI ei ole painettuna pohjaan. Huomaa että tässä vaihtoehto pitää olla sama numero kuin mikä oli `digital on` komennossa.
 ![Digital 13 off komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/digital_io_off.jpg)
-1. Lopuksi laitetaan vielä 1 sekunnin odotus jotta valo on poissa päällä myös yhden sekunnin. Muuten emme välttämättä huomaa mikäli valo kävi pois päältä ollenkaan.
-![wait fo x secs komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/wait_for_x_secs.jpg)
 
 ## Lopullinen ohjelmakoodi
 
 Lopullinen ohjelmakoodi tulisi näyttää suurinpiirtein tältä
 
-![Lopullinen ohjelmakoodi](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/blink/blink_code.jpg)
+![Lopullinen ohjelmakoodi](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/pc_control/pc_control_code.jpg)
 
 ## Käynnistä ohjelma
 
-S4A oikeassa yläreunassa on vihreä lipun kuva. Tästä painamalla pitäisi ohjelmakoodi lähteä ajoon ja LED valo tulisi alkaa vilkkumaan.
+S4A oikeassa yläreunassa on vihreä lipun kuva. Tästä painamalla pitäisi ohjelmakoodi lähteä ajoon ja LED valo tulisi mennä päälle jos VÄLILYÖNTI on painettuna, kun VÄLILYÖNTI näppäimen päästää irti niin LED valon tulisi sammua.
 ![Vihreä aloita ohjelmakoodi lippu](https://github.com/Atihinen/a4kidsWs/raw/master/media/start_script.jpg) 
 
 Mikäli näin ei tapahdu. Tarkista kytkennät ja että oikeat IO pinnit on käytössä sekä LED valon toiminta erillisellä virtalähteellä.
@@ -83,13 +81,13 @@ Mikäli näin ei tapahdu. Tarkista kytkennät ja että oikeat IO pinnit on käyt
 S4A oikeassa yläreunassa on punainen kahdeksankulmio. Tästä painamalla pitäisi ohjelmakoodin suoritus loppua ja valo jää siihen tilaan mikä oli viimeksi ollut.
 ![Punainen lopeta ohjelmakoodi kahdeksankulmio](https://github.com/Atihinen/a4kidsWs/raw/master/media/stop_script.jpg)
 
-Huomaa, LED valo voi jäädä vielä palamaan riippuen edellisestä valon tilasta. Sammuttaaksesi Arduino tulee sinun irrottaa se tietokoneesta irti.
+Sammuttaaksesi Arduino tulee sinun irrottaa se tietokoneesta irti.
 
 # Kysymys
 
 Muuta ohjelmakoodia esimerkin mukaisesti.
 
-![Jälkimmäinen wait 1 secs muutetaan wait 4 secs](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/blink/blink_code_question.jpg)
+![Korvataan if else pelkästään if ehdolla ja lisätään sisälle digital on, wait for sec ja digital off](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/pc_control/pc_control_code_question.jpg)
 
 Muutos ei tarvitse uudelleen kytkentää joten Arduinoa ei tarvitse irrottaa tietokoneesta.
 
