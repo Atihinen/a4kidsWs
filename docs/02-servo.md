@@ -62,7 +62,7 @@ Ohjelmakoodi rakkentaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva t
 1. Lisätään motor komento kulmaan 0
 ![Motor komento kulmassa 0](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/motor_0_angle.jpg) tämä asettaa servo moottorin 0 asteen kulmaan
 1. Listään odota sekuntti, jolloin servomoottorin asento on odotusajan verran sama. Huomaa että tähän voidaan asettaa kaksi arvoa. Servomoottorin pinnin numero ja kulma joka voi olla mitä vain 0-360 väliltä.
-![wait for x secs komento](https://github.com/Atihinen/a4kidsWs/raw/
+![wait for x secs komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/wait_for_x_secs.jpg)
 1. Lisätään motor komento kulmaan 90
 ![Motor komento kulmassa 0](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/motor_90_angle.jpg) tämä asettaa servo moottorin 90 asteen kulmaan
 1. Tähän laitetaan vielä 1 sekunnin odotus jotta servomoottori ei liiku yhden sekunnin.
