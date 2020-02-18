@@ -54,6 +54,7 @@ def _get_documents(heads, repo, branches):
                 md_file_path = os.path.join(doc_path, file)
                 with open(md_file_path, 'r') as f:
                     mdcontent += "\n".join(f.readlines())
+                mdcontent += "\n"
         filename = "{}_a4kWs.pdf".format(language_name)
         destination = os.path.join(pdf_path, filename)
         md2pdf(destination, md_content=mdcontent, css_file_path=css_file)
