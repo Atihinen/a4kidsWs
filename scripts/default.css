@@ -122,3 +122,7 @@ img {
     display: block;
     max-width: 35em;
 }
+
+@media print {
+    h1 {page-break-before: always;}
+}
