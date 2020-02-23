@@ -1,6 +1,6 @@
 # Servo
 
-# Sisältö
+## Sisältö
 
 1. Laitteisto
 1. Aloitus
@@ -15,7 +15,7 @@
 1. Kysymys
 
 
-# Laitteisto
+## Laitteisto
 
 Tämän kokeen suorittamiseksi tarvitset:
  
@@ -24,11 +24,11 @@ Tämän kokeen suorittamiseksi tarvitset:
 * 1 x [Arduino UNO](https://www.arduino.cc/en/Guide/ArduinoUno)
 * 1 x [Koekytkentälevy](https://fi.wikipedia.org/wiki/Koekytkent%C3%A4levy)
 
-# Aloitus
+## Aloitus
 
 Kokeen alussa tulee tehdä tarvittavat kytkennät jonka jälkeen Arduinon voi liittää tietokoneeseen kiinni. *MUISTA* aina tehdä kytkennät kun virta on pois päältä (irti tietokoneesta). Näin vältytään laitteiston mahdolliselta hajoamiselta.
 
-## Kytkentä
+### Kytkentä
 
 ![Kytkentäkaavio](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/servo/servo_wiring.jpg)
 
@@ -37,15 +37,15 @@ Liitetään yleensä rusehtava kaapeli koekytkentälevyn pitkään siniseen viiv
 Viimeinen oranssi kaapeli servosta kiinnitetään Arduinon IO pinniin 8.
 
 
-## Arduino kytkentä tietokoneeseen
+### Arduino kytkentä tietokoneeseen
 
 Liitä Arduinon mukana tuleva USB kaapeli Arduinoon ja tietokoneessa vapaana olevaan USB porttiin.
 
-## Avaa S4A
+### Avaa S4A
 
 Nyt voimme avata S4A sovellus jonka tulisi huomata Arduinon olevan kiinni.
 
-# Ohjelmakoodi
+## Ohjelmakoodi
 
 Ohjelmakoodin tarkoituksena on tehdä ohjelma joka 
 
@@ -53,7 +53,7 @@ Tätä sykliä on tarkoitus jatkaa niin kauan kuin ohjelma on ajossa.
 
 Ohjelmakoodi rakkentaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva toimenpide ja raahataan se keskelle. Palikoita voi yhdistellä toisiinsa raahamalla ne lähekkäin.
 
-## Ohjelmakoodin vaiheet
+### Ohjelmakoodin vaiheet
 
 1. Aloitataan ohjelman aloitus. Tämä tapahtuu lisäämällä `When FLAG clicked` komento
 ![When FLAG clicked komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/when_flag_clicked.jpg)
@@ -73,24 +73,24 @@ Ohjelmakoodi rakkentaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva t
 ![wait fo x secs komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/wait_for_x_secs.jpg)
 
 
-## Lopullinen ohjelmakoodi
+### Lopullinen ohjelmakoodi
 
 Lopullinen ohjelmakoodi näyttää kutakuinkin tältä
 ![Lopullinen ohjelamoodi](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/servo/servo_script.jpg)
 
-## Käynnistä ohjelma
+### Käynnistä ohjelma
 
 S4A oikeassa yläreunassa on vihreä lipun kuva. Tästä painamalla pitäisi ohjelmakoodi lähteä ajoon ja servo moottori alkaisi liikkumaan.
 ![Vihreä aloita ohjelmakoodi lippu](https://github.com/Atihinen/a4kidsWs/raw/master/media/start_script.jpg) 
 
 Mikäli näin ei tapahdu. Tarkista kytkennät ja että oikeat IO pinnit on käytössä.
 
-## Lopeta ohjelma
+### Lopeta ohjelma
 
 S4A oikeassa yläreunassa on punainen kahdeksankulmio. Tästä painamalla pitäisi ohjelmakoodin suoritus loppua ja servo jää siihen asentoon mikä oli viimeksi ollut.
 ![Punainen lopeta ohjelmakoodi kahdeksankulmio](https://github.com/Atihinen/a4kidsWs/raw/master/media/stop_script.jpg)
 
-# Kysymys
+## Kysymys
 
 Muuta ohjelmakoodia esimerkin mukaisesti.
 

@@ -1,6 +1,6 @@
-# Vilkku valo
+# Tietokone ohjaus
 
-# Sisältö
+## Sisältö
 
 1. Laitteisto
 1. Aloitus
@@ -15,7 +15,7 @@
 1. Kysymys
 
 
-# Laitteisto
+## Laitteisto
 
 Tämän kokeen suorittamiseksi tarvitset:
  
@@ -24,11 +24,11 @@ Tämän kokeen suorittamiseksi tarvitset:
 * 1 x [Arduino UNO](https://www.arduino.cc/en/Guide/ArduinoUno)
 * 1 x [Koekytkentälevy](https://fi.wikipedia.org/wiki/Koekytkent%C3%A4levy)
 
-# Aloitus
+## Aloitus
 
 Kokeen alussa tulee tehdä tarvittavat kytkennät jonka jälkeen Arduinon voi liittää tietokoneeseen kiinni. *MUISTA* aina tehdä kytkennät kun virta on pois päältä (irti tietokoneesta). Näin vältytään laitteiston mahdolliselta hajoamiselta.
 
-## Kytkentä
+### Kytkentä
 
 ![Kytkentäkaavio](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/blink/blink_wiring.jpg)
 
@@ -36,21 +36,21 @@ Liitetään musta kaapeli koekytkentälevyn pitkään siniseen viivaan joka on y
 
 Värikäs kaapeli kiinnitetään vapaaseen jääneeseen LED pinniin ja Arduinon IO pinniin numero 13.
 
-## Arduino kytkentä tietokoneeseen
+### Arduino kytkentä tietokoneeseen
 
 Liitä Arduinon mukana tuleva USB kaapeli Arduinoon ja tietokoneessa vapaana olevaan USB porttiin.
 
-## Avaa S4A
+### Avaa S4A
 
 Nyt voimme avata S4A sovellus jonka tulisi huomata Arduinon olevan kiinni.
 
-# Ohjelmakoodi
+## Ohjelmakoodi
 
 Ohjelmakoodin tarkoituksena on tehdä ohjelma joka pitää LED valoa päällä niin kauan kuin tietokoneen välilyönti näppäintä on painettu. Tätä sykliä on tarkoitus jatkaa niin kauan kuin ohjelma on ajossa.
 
 Ohjelmakoodi rakkentaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva toimenpide ja raahataan se keskelle. Palikoita voi yhdistellä toisiinsa raahamalla ne lähekkäin.
 
-## Ohjelmakoodin vaiheet
+### Ohjelmakoodin vaiheet
 
 1. Aloitataan ohjelman aloitus. Tämä tapahtuu lisäämällä `When FLAG clicked` komento
 ![When FLAG clicked komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/when_flag_clicked.jpg)
@@ -63,27 +63,27 @@ Ohjelmakoodi rakkentaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva t
 1. Lisätään `digital 13 off` komento ehdon EPÄTOSI haaraan. Tällä laitetaan LED valo pois päältä, jos VÄLILYÖNTI ei ole painettuna pohjaan. Huomaa että tässä vaihtoehto pitää olla sama numero kuin mikä oli `digital on` komennossa.
 ![Digital 13 off komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/digital_io_off.jpg)
 
-## Lopullinen ohjelmakoodi
+### Lopullinen ohjelmakoodi
 
 Lopullinen ohjelmakoodi tulisi näyttää suurinpiirtein tältä
 
 ![Lopullinen ohjelmakoodi](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/pc_control/pc_control_code.jpg)
 
-## Käynnistä ohjelma
+### Käynnistä ohjelma
 
 S4A oikeassa yläreunassa on vihreä lipun kuva. Tästä painamalla pitäisi ohjelmakoodi lähteä ajoon ja LED valo tulisi mennä päälle jos VÄLILYÖNTI on painettuna, kun VÄLILYÖNTI näppäimen päästää irti niin LED valon tulisi sammua.
 ![Vihreä aloita ohjelmakoodi lippu](https://github.com/Atihinen/a4kidsWs/raw/master/media/start_script.jpg) 
 
 Mikäli näin ei tapahdu. Tarkista kytkennät ja että oikeat IO pinnit on käytössä sekä LED valon toiminta erillisellä virtalähteellä.
 
-## Lopeta ohjelma
+### Lopeta ohjelma
 
 S4A oikeassa yläreunassa on punainen kahdeksankulmio. Tästä painamalla pitäisi ohjelmakoodin suoritus loppua ja valo jää siihen tilaan mikä oli viimeksi ollut.
 ![Punainen lopeta ohjelmakoodi kahdeksankulmio](https://github.com/Atihinen/a4kidsWs/raw/master/media/stop_script.jpg)
 
 Sammuttaaksesi Arduino tulee sinun irrottaa se tietokoneesta irti.
 
-# Kysymys
+## Kysymys
 
 Muuta ohjelmakoodia esimerkin mukaisesti.
 
