@@ -32,7 +32,7 @@ Kokeen alussa tulee tehdä tarvittavat kytkennät jonka jälkeen Arduinon voi li
 
 ![Kytkentäkaavio](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/blink/blink_wiring.jpg)
 
-Liitetään musta kaapeli koekytkentälevyn pitkään siniseen viivaan joka on yhteydessä Arduinon GROUND IO pinniin. Toinen pää kinnitetään LEDin miinus pinniin (viistetty kulma).
+Liitetään musta kaapeli koekytkentälevyn pitkään siniseen viivaan joka on yhteydessä Arduinon GROUND IO pinniin. Toinen pää kiinnitetään LEDin miinus pinniin (viistetty kulma).
 
 Värikäs kaapeli kiinnitetään vapaaseen jääneeseen LED pinniin ja Arduinon IO pinniin numero 13.
 
@@ -46,13 +46,13 @@ Nyt voimme avata S4A sovellus jonka tulisi huomata Arduinon olevan kiinni.
 
 ## Ohjelmakoodi
 
-Ohjelmakoodin tarkoituksena on tehdä ohjelma joka pitää LED valoa päällä niin kauan kuin tietokoneen välilyönti näppäintä on painettu. Tätä sykliä on tarkoitus jatkaa niin kauan kuin ohjelma on ajossa.
+Ohjelmakoodin tarkoituksena on tehdä ohjelma joka pitää LED valoa päällä niin kauan kuin tietokoneen välilyönti näppäintä pidetään pohjassa. Tätä sykliä on tarkoitus jatkaa niin kauan kuin ohjelma on ajossa.
 
-Ohjelmakoodi rakkentaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva toimenpide ja raahataan se keskelle. Palikoita voi yhdistellä toisiinsa raahamalla ne lähekkäin.
+Ohjelmakoodi rakennetaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva toimenpide ja raahataan se keskelle. Palikoita voi yhdistellä toisiinsa raahamalla ne lähekkäin.
 
 ### Ohjelmakoodin vaiheet
 
-1. Aloitataan ohjelman aloitus. Tämä tapahtuu lisäämällä `When FLAG clicked` komento
+1. Lisätään ohjelman aloitus. Tämä tapahtuu lisäämällä `When FLAG clicked` komento
 ![When FLAG clicked komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/when_flag_clicked.jpg)
 1. Lisätään loputon silmukka
 ![Forever loop komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/forver_loop.jpg)

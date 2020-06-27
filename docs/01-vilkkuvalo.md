@@ -32,7 +32,7 @@ Kokeen alussa tulee tehdä tarvittavat kytkennät jonka jälkeen Arduinon voi li
 
 ![Kytkentäkaavio](https://github.com/Atihinen/a4kidsWs/raw/master/media/labs/blink/blink_wiring.jpg)
 
-Liitetään musta kaapeli koekytkentälevyn pitkään siniseen viivaan joka on yhteydessä Arduinon GROUND IO pinniin. Toinen pää kinnitetään LEDin miinus pinniin (viistetty kulma).
+Liitetään musta kaapeli koekytkentälevyn pitkään siniseen viivaan joka on yhteydessä Arduinon GROUND IO pinniin. Toinen pää kiinnitetään LEDin miinus pinniin (viistetty kulma).
 
 Värikäs kaapeli kiinnitetään vapaaseen jääneeseen LED pinniin ja Arduinon IO pinniin numero 13.
 
@@ -42,17 +42,17 @@ Liitä Arduinon mukana tuleva USB kaapeli Arduinoon ja tietokoneessa vapaana ole
 
 ### Avaa S4A
 
-Nyt voimme avata S4A sovellus jonka tulisi huomata Arduinon olevan kiinni.
+Nyt voimme avata S4A sovellus, jonka tulisi huomata Arduinon olevan kiinni.
 
 ## Ohjelmakoodi
 
-Ohjelmakoodin tarkoituksena on tehdä ohjelma joka väläyttää LED valoa sekunnin ajan ja sammuu sitten sekunniksi. Tätä sykliä on tarkoitus jatkaa niin kauan kuin ohjelma on ajossa.
+Ohjelmakoodin tarkoituksena on tehdä ohjelma laittaa LED valon päälle sekunniksi ja sitten sammuttaa sekunniksi. Tätä sykliä on tarkoitus jatkaa niin kauan kuin ohjelma on ajossa.
 
-Ohjelmakoodi rakkentaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva toimenpide ja raahataan se keskelle. Palikoita voi yhdistellä toisiinsa raahamalla ne lähekkäin.
+Ohjelmakoodi rakennetaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva toimenpide ja raahataan se keskelle. Palikoita voi yhdistellä toisiinsa raahamalla ne lähekkäin.
 
 ### Ohjelmakoodin vaiheet
 
-1. Aloitataan ohjelman aloitus. Tämä tapahtuu lisäämällä `When FLAG clicked` komento
+1. Lisätään ohjelman aloitus. Tämä tapahtuu lisäämällä `When FLAG clicked` komento
 ![When FLAG clicked komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/when_flag_clicked.jpg)
 1. Lisätään loputon silmukka
 ![Forever loop komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/forver_loop.jpg)
@@ -62,7 +62,7 @@ Ohjelmakoodi rakkentaan S4A ympäristössä kuin LEGO palikat. Valitaan sopiva t
 ![wait for x secs komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/wait_for_x_secs.jpg)
 1. Lisätään `digital 13 off` komento. Tällä laitetaan LED valo pois päältä. Huomaa että tässä vaihtoehto pitää olla sama numero kuin mikä oli `digital on` komennossa.
 ![Digital 13 off komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/digital_io_off.jpg)
-1. Lopuksi laitetaan vielä 1 sekunnin odotus jotta valo on poissa päällä myös yhden sekunnin. Muuten emme välttämättä huomaa mikäli valo kävi pois päältä ollenkaan.
+1. Lopuksi laitetaan vielä 1 sekunnin odotus jotta valo on poissa päällä myös yhden sekunnin. Muussa tapauksessa emme todennäköisesti huomaisi edes että valo kävi päällä.
 ![wait fo x secs komento](https://github.com/Atihinen/a4kidsWs/raw/master/media/code_commands/wait_for_x_secs.jpg)
 
 ### Lopullinen ohjelmakoodi
