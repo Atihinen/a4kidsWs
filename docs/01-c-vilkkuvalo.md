@@ -72,6 +72,10 @@ void loop() {
 
 `digitalWrite(ledPin, LOW);` -komennolla asetetaan ledPin-nimiseen muuttujaan tallennettu pinni matalaan tilaan (LOW). Tämä tarkoittaa, että kyseiseen pinniin kytketty LED-valo sammuu. Tämä komento on yleisesti käytössä Arduino-ohjelmoinnissa, jossa ohjataan mikrokontrollerin pinnejä.
 
+### Wokwi esimerkki
+
+[https://wokwi.com/projects/416997601068473345](https://wokwi.com/projects/416997601068473345)
+
 # Kysymys
 
 Muuta ohjelmassa jälkimmäisen `delay` arvo `1000` arvoon `10000`. Päivitä ohjelmakoodi Arduinoon. Mitä tapahtuu ledivalolle?
