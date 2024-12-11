@@ -1,5 +1,5 @@
 # Arduino
-**Arduino* on pieni tietokone, jota kutsutaan myös mikrokontrolleriksi.
+**Arduino** on pieni tietokone, jota kutsutaan myös mikrokontrolleriksi.
 Sitä käytetään erilaisten laitteiden ja projektien rakentamiseen, kuten robottien, valojen ja antureiden ohjaamiseen.
 Arduino on helppo oppia ja käyttää, joten se sopii hyvin lapsille ja aloittelijoille.
 Voit ohjelmoida Arduinoa tietokoneella ja kertoa sille, mitä sen pitää tehdä.
@@ -28,7 +28,7 @@ Mikäli tarvikkeita ei löydy tai haluat vain kokeilla niin voit myös käyttä�
 
 Helpoiten pääset arduino ohjelmointiin kun käytät Arduino IDE kehitysympäristöä.
 
-https://www.kasityokoulurobotti.fi/2017/11/arduino-ohjelmointiympariston-asennus/
+[Arduino IDE:n asennusohjeet: https://www.kasityokoulurobotti.fi/2017/11/arduino-ohjelmointiympariston-asennus/](https://www.kasityokoulurobotti.fi/2017/11/arduino-ohjelmointiympariston-asennus/)
 
 # Ohjelmointi
 
